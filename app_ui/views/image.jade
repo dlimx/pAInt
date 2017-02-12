@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  .row#vertcenter
+    .col-md-10.col-md-offset-1
+      .col-md-6.col-xs-12.col-sm-12
+        p.lefts
+          img#original.centered(src="./images/loading.gif", class='image')
+      .col-md-6.col-xs-12.col-sm-12
+        p.right
+          img#filtered.centered(src="./images/loading.gif", class='image')
+        .alert.alert-danger#imgerror.hidden
+        a#download.hidden(href="/" download)
+          button.btn.btn-primary.btn-large Download
+
+  script(src="https://www.gstatic.com/firebasejs/3.6.7/firebase.js")
+  script(src="https://code.jquery.com/jquery-2.2.4.min.js")
+  script(src="/javascripts/firebase.js")
+  script(src="/javascripts/image.js")
